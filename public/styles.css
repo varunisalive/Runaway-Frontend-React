@@ -26,78 +26,6 @@ hr.dotted {
 
 /* Section-1 : Title */
 
-.icon {
-  display: none;
-}
-
-.navbar {
-  position: relative;
-  padding: 45px 30px;
-}
-
-
-
-.navbar h1 {
-  position: absolute;
-  top: 45px;
-  font-family: 'Rubik Mono One', sans-serif;
-  font-size: 35px;
-  animation: nav-h1-load var(--nav-load-time) ease-out;
-  transition: color 0.5s ease-out, font-size 1s ease-out;
-}
-
-  @keyframes nav-h1-load {
-    0%{
-      transform: translateX(-100%);
-    }
-    100%{
-      transform: translateX(0);
-    }
-  }
-
-.navbar
-  h1:hover{
-   font-size: 37px;
-   color: #b22222;
-}
-
-nav {
-
-  text-align: right;
-}
-
-nav ul {
-  display: inline-block;
-  list-style-type: none;
-  animation: nav-ul-load var(--nav-load-time) ease-out;
-}
-
-  @keyframes nav-ul-load {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-
-nav ul li {
-  display: inline-block;
-  margin: 10px;
-}
-
-nav ul li a{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  color: black;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-nav ul li a:hover {
-  color: #b22222;
-}
-
 
 
 .container {
@@ -536,63 +464,7 @@ select:focus {
 @media (max-width: 1024px) {
 
 
-  nav {
-    margin-top: 60px;
-    overflow: hidden;
-    background-color: black;
-    border-radius: 30px;
-    position: relative;
-  }
-
-  .navbar ul {
-    color: white;
-    padding: 3px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-
-  nav ul li {
-    display: block;
-    margin: 0;
-    padding: 15px 10px;
-  }
-
-  nav ul li a {
-    color: #fff;
-  }
-
-  nav ul li a:hover{
-    color: #505050;
-  }
-
-  nav ul li a:focus{
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  .icon {
-    padding: 10px 12px;
-    border: none;
-    border-radius: 100%;
-    background: black;
-    color: #fff;
-    display: block;
-    position: absolute;
-    right: 50px;
-    top: 40px;
-  }
-
-  .icon:focus{
-    outline: none;
-  }
-
-
-  .navbar .icon:hover{
-    color: #b22222;
-  }
-
+  
 
   .row{
     text-align: center;
@@ -696,61 +568,7 @@ select:focus {
 
     /* Section 1 : Navbar and Title */
 
-    .navbar {
-      padding: 10px 0;
-    }
-
-    .navbar h1 {
-      top: 18px;
-      left : 14px;
-      font-family: 'Rubik Mono One', sans-serif;
-      font-size: 1.75rem;
-      transition: color 1s ease;
-    }
-
-    .navbar
-      h1:hover{
-       color: #b22222;
-       font-size: 1.75rem;
-    }
-
-    nav {
-      display: block;
-      margin-top: 60px;
-      background-color: black;
-      border-radius: 0%;
-    }
-
-    #menuItems {
-      display: none;
-    }
-
-    nav ul {
-      animation: none;
-    }
-
-    nav ul li {
-      display: block;
-      margin: 0;
-      padding: 15px 10px;
-    }
-
-    nav ul li a {
-      color: #fff;
-    }
-
-
-    .icon {
-      padding: 10px 12px;
-      border-radius: 100%;
-      background: black;
-      color: #fff;
-      display: block;
-      position: absolute;
-      right: 10px;
-      top: 10px;
-    }
-
+    
 
 
     #home {

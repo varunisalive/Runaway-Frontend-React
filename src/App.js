@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./Components/Header";
+import Header from "./Components/Header/Header";
 import Catagory from "./Components/Catagory";
 import Products from "./Components/Products";
 import Offer from "./Components/Offer";
@@ -15,11 +15,11 @@ function App() {
     <div>
 
       <Header />            {/* Section-1 : Header  */}
-      <hr class="dotted" />
+      <hr className="dotted" />
       <Catagory />          {/* Section-2 : Catagory  */}
       <Products />          {/* Section-3 : featured products  */}
       <Offer />             {/* Section 4 : Offer */}
-      <hr class="dotted" />
+      <hr className="dotted" />
       <Testimonials />      {/* Section 5 : Testimonials  */}
       <Brands />            {/* Section 6 - Brands  */}
       <Footer />            {/* Section - 7 : footer  */}
