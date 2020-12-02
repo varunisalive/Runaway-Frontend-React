@@ -1,61 +1,88 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-
+// import * as AiIcons from 'react-icons/ai';
+import { Spring, animated } from 'react-spring/renderprops';
 import { Link } from 'react-router-dom';
 import "./Navbar.css";
 
-function Navbar() {
+const menuItems = [
+    {
+        title: "Home",
+        path: "/",
+        cName: "nav-text"
+    },
+    {
+        title: "Products",
+        path: "/Products",
+        cName: "nav-text"
+    },
+    {
+        title: "About Us",
+        path: "/about-us",
+        cName: "nav-text"
+    },
+    {
+        title: "Contact Us",
+        path: "/contact-us",
+        cName: "nav-text"
+    },
+]
 
-    const [menubar, setMenubar] = useState(false);
+class Navbar extends React.Component {
 
-    return (
-        
-        <div className="navbar">
-            <div className="title">
-                <h1>Runaway</h1>
+    state = {
+        toggle: false,
+        data: menuItems
+    };
+
+    onToggle = () => this.setState(state => ({ toggle: !state.toggle }))
+
+    render() {
+        const { toggle, data } = this.state
+        return (
+
+            <div className="navbar">
+                <div className="title">
+                    <h1>Runaway</h1>
+                </div>
+
+                <div className="navbar-icon">
+                    <Link to="#" className="menu-bars">
+                        <FaIcons.FaBars onClick={this.onToggle} />
+                    </Link>
+                </div>
+
+                <Spring
+                    native
+                    force
+                    config={{ tension: 9000, friction: 1000, precision: 1 }}
+                    from={{ height: toggle ? 0 : 'auto'}}
+                    to={{ height: toggle ? 'auto' : 0}}>
+                    {props => (
+
+
+                        <animated.nav style={props} className="nav-menu">
+
+                            <ul className="nav-menu-items">
+
+                                {data.map((item, index) => {
+                                    return (
+                                        <li key={index} className={item.cName}>
+                                            <Link to={item.path}>
+                                                <span>{item.title}</span>
+                                            </Link>
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                        </animated.nav>
+                    )}
+                </Spring>
             </div>
 
-            <div className="navbar-icon">
-                <Link to="#" className="menu-bars">
-                    <FaIcons.FaBars onClick={() => setMenubar(!menubar)} />
-                </Link>
-            </div>
+        )
+    }
 
-            <nav className={menubar ? "nav-menu active" : "nav-menu"}>
-                <ul className="nav-menu-items">
-                    <li className="navbar-toggle">
-                            <Link to="#" className="menu-bars">
-                                <AiIcons.AiOutlineClose onClick={() => setMenubar(!menubar)}/>
-                            </Link>
-                        </li>
-                    <li className="nav-text">
-                        
-                        <Link to="#home">
-                            <span>Home</span>
-                        </Link>
-                    </li>
-                    <li className="nav-text">
-                        <Link to="/Products">
-                            Products
-                        </Link>
-                    </li>
-                    <li className="nav-text">
-                        <Link to="/Contact-us">
-                            Contact Us
-                        </Link>
-                    </li>
-                    <li className="nav-text">
-                        <Link to="/About-us">
-                            About Us
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
-
-    )
 }
 
-export default Navbar
+export default Navbar;

@@ -33,6 +33,7 @@ hr.dotted {
   margin: auto;
   padding-left: 25px;
   padding-right: 25px;
+  transition: all 0.5s ease;
 }
 
 .row {
@@ -42,6 +43,8 @@ hr.dotted {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+
 
 .col-2 {
   flex-basis: 50%;
@@ -59,7 +62,7 @@ hr.dotted {
 .col-2 h1 {
   display: inline-block;
   color: black;
-  margin: 50px 50px 5px 0;
+  margin: 80px 50px 5px 0;
   font-size: 3.7rem;
   line-height: 60px;
 
