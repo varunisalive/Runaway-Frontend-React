@@ -5,7 +5,7 @@ import Products from "./Components/Products";
 import Offer from "./Components/Offer";
 import Testimonials from "./Components/Testimonials";
 import Brands from "./Components/Brands";
-import Footer from "./Components/Footer";
+import Footer from "./Components/Footer/Footer";
 
 
 
