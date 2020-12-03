@@ -1,19 +1,27 @@
 import React from "react";
-import Navbar from "./Navbar";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
 
 function Header() {
     return (
         <section id="header">
             <div className="container">
-                <div>
-                    <Router>
-                        <Navbar />
-                        <Switch>
-                            <Route path="/" />
-                        </Switch>
-                    </Router>
+                <div className="navbar">
+                    <div className="title">
+                        <h1>Runaway</h1>
+                    </div>
+
+                    <nav >
+                        <ul id="menuItems">
+                            <li><a href="#home">Home</a></li>
+                            <li>Products</li>
+                            <li>Contact</li>
+                            <li>About</li>
+                            <li><i className="fas fa-shopping-cart"></i></li>
+                        </ul>
+                    </nav>
+
+                    <button className="icon">
+                        <i className="fa fa-bars fa-2x"></i>
+                    </button>
 
                 </div>
 

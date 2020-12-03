@@ -1,204 +1,198 @@
-
-
-.navbar {
-  position: relative;
-  padding: 45px 45px 10px;
-}
-
-
-.navbar h1 {
-  position: absolute;
-  top: 45px;
-  font-family: 'Rubik Mono One', sans-serif;
-  font-size: 35px;
-  animation: nav-h1-load var(--nav-load-time) ease-out;
-  transition: color 0.5s ease-out, font-size 1s ease-out;
-}
-
-@keyframes nav-h1-load {
-  0% {
-    transform: translateX(-100%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.navbar h1:hover {
-  font-size: 37px;
-  color: #b22222;
-}
-
-.navbar-icon {
-  display: none;
-}
-
-.navbar-toggle {
-  display: none;
-}
-
-.menu-bars {
-  color: #fff;
-  font-size: 1.5rem;
-  background: none;
-  padding-top: 6px;
-}
-
-.menu-bars:hover {
-  color: #b22222
-}
-
-.nav-menu {
-  text-align: right;
-}
-
-
-.nav-menu-items {
-  display: inline-block;
-  list-style-type: none;
-  animation: nav-ul-load var(--nav-load-time) ease-out;
-}
-
-@keyframes nav-ul-load {
-  0% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.nav-text {
-  display: inline-block;
-  margin: 10px;
-}
-
-.nav-text a {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
-  font-weight: normal;
-  color: black;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-span {
-  font-weight: normal;
-  letter-spacing: 1px;
-}
-
-.nav-text a:hover {
-  color: #b22222;
-}
-
-
-@media (max-width: 1024px) {
-
   .navbar {
-    margin-bottom: 40px;
-  }
-
-
-  .nav-menu-items {
     position: relative;
-    color: white;
-    padding: 3px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-    padding: 1.5rem;
-    grid-column: span 4;
-
+    padding: 45px;
   }
-
-
-  .nav-text a:focus {
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-
-  .navbar-icon {
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000000;
-    padding: 6px 12px;
-    position: absolute;
-    right: 25px;
-    top: 35px;
-  }
-
-
-  .nav-menu {
-    margin: 3.5rem 0 0;
-    /* display: none; */
-    display: block;
-    background-color: #000000;
-    width: 100%; 
-    overflow: hidden;
-    color: white;
-   
-    /* justify-content: center;
-    position: fixed;
-    z-index: 5;
-    right: -250px;
-    transition: all 1s ease; */
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto 1fr;
-    
-  }
-
-
-}
-
-@media screen and (max-width: 780px) {
-
-  .navbar {
-    padding: 10px 0;
-  }
-
+  
   .navbar h1 {
-    top: 18px;
-    left: 14px;
+    position: absolute;
+    top: 45px;
     font-family: 'Rubik Mono One', sans-serif;
-    font-size: 1.75rem;
-    transition: color 1s ease;
+    font-size: 35px;
+    animation: nav-h1-load var(--nav-load-time) ease-out;
+    transition: color 0.5s ease-out, font-size 1s ease-out;
   }
-
+  
+  @keyframes nav-h1-load {
+    0% {
+      transform: translateX(-100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
   .navbar h1:hover {
+    font-size: 37px;
     color: #b22222;
-    font-size: 1.75rem;
   }
-
+  
   .navbar-icon {
-    right: 10px;
-    top: 10px;
+    display: none;
   }
-
-  .nav-menu.active {
-    top: 0;
-    transition: all 0.5s ease;
-  }
-
-  .nav-text {
-    display: block;
-    margin: 0;
-    padding: 15px 10px;
-  }
-
-  .nav-text a {
+  
+  
+  .menu-bars {
     color: #fff;
+    font-size: 1.5rem;
+    background: none;
+    padding-top: 6px;
   }
-
-
-
-
-
-}
+  
+  .menu-bars:hover {
+    color: #b22222
+  }
+  
+  .nav-menu {
+    text-align: right;
+  }
+  
+  
+  .nav-menu-items {
+    display: inline-block;
+    list-style-type: none;
+    animation: nav-ul-load var(--nav-load-time) ease-out;
+  }
+  
+  @keyframes nav-ul-load {
+    0% {
+      transform: translateX(100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .nav-text {
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  .nav-text a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: black;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  span {
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+  
+  .nav-text a:hover {
+    color: #b22222;
+  }
+  
+  
+  @media (max-width: 1024px) {
+  
+    .navbar {
+      margin-bottom: 40px;
+    }
+  
+  
+    .nav-menu-items {
+      position: relative;
+      color: white;
+      padding: 3px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 17px;
+      display: block;
+      padding: 1.5rem;
+      grid-column: span 4;
+  
+    }
+  
+  
+    .nav-text a:focus {
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+  
+  
+    .navbar-icon {
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000000;
+      padding: 6px 12px;
+      position: absolute;
+      right: 25px;
+      top: 35px;
+    }
+  
+  
+    .nav-menu {
+      margin: 3.5rem 0 0;
+      /* display: none; */
+      display: block;
+      background-color: #000000;
+      width: 100%; 
+      overflow: hidden;
+      color: white;
+     
+      /* justify-content: center;
+      position: fixed;
+      z-index: 5;
+      right: -250px;
+      transition: all 1s ease; */
+  
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto 1fr;
+      
+    }
+  
+  
+  }
+  
+  @media screen and (max-width: 780px) {
+  
+    .navbar {
+      padding: 10px 0;
+    }
+  
+    .navbar h1 {
+      top: 18px;
+      left: 14px;
+      font-family: 'Rubik Mono One', sans-serif;
+      font-size: 1.75rem;
+      transition: color 1s ease;
+    }
+  
+    .navbar h1:hover {
+      color: #b22222;
+      font-size: 1.75rem;
+    }
+  
+    .navbar-icon {
+      right: 10px;
+      top: 10px;
+    }
+  
+    .nav-menu.active {
+      top: 0;
+      transition: all 0.5s ease;
+    }
+  
+    .nav-text {
+      display: block;
+      margin: 0;
+      padding: 15px 10px;
+    }
+  
+    .nav-text a {
+      color: #fff;
+    }
+  
+  
+  
+  
+  
+  }

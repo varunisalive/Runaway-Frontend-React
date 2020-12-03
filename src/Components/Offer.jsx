@@ -7,7 +7,7 @@ function Offer() {
                 <h1 className="title-product">Exclusive Offer</h1>
                 <img data-aos="fade-right" className="offer-img" src="images\nike-offer-1.jpg" alt="nike-offer-img" />
                 <div className="offer-dec-div">
-                    <p data-aos="fade-up" className="offer-desc">Exclusively Available on <spam>Runaway</spam></p>
+                    <p data-aos="fade-up" className="offer-desc">Exclusively Available on <span>Runaway</span></p>
                 </div>
                 <div className="offer-detail">
                     <h1 data-aos="fade-up">Nike Air Force 1</h1>
