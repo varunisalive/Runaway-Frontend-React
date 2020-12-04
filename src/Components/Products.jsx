@@ -7,7 +7,7 @@ function Products() {
                 <h1 className="title-product">Featured Products</h1>
                 <div className="row">
                     <div className="col-4" data-aos="fade-up">
-                        <img src="images\nike-4.jpg" alt="nike-air-pegasus" />
+                        <img src="images/nike-4.jpg" alt="nike-air-pegasus" />
                         <h4>Nike Air Zoom Pegasus 37</h4>
                         <div className="rating">
                             <i className="fas fa-star"></i>
@@ -19,7 +19,7 @@ function Products() {
                         <p>₹9,995</p>
                     </div>
                     <div className="col-4" data-aos="fade-up">
-                        <img src="images\nike-5.jpg" alt="Zoom Freak 2" />
+                        <img src="images/nike-5.jpg" alt="Zoom Freak 2" />
                         <h4>Zoom Freak 2</h4>
                         <div className="rating">
                             <i className="fas fa-star"></i>
@@ -31,7 +31,7 @@ function Products() {
                         <p>₹10,295</p>
                     </div>
                     <div className="col-4" data-aos="fade-up">
-                        <img src="images\nike-1.jpg" alt="Nike DBreak-Type" />
+                        <img src="images/nike-1.jpg" alt="Nike DBreak-Type" />
                         <h4>Nike DBreak-Type</h4>
                         <div className="rating">
                             <i className="fas fa-star"></i>
@@ -43,7 +43,7 @@ function Products() {
                         <p>₹8,195</p>
                     </div>
                     <div className="col-4" data-aos="fade-up">
-                        <img src="images\nike-2.jpg" alt="LeBron Witness 5 EP" />
+                        <img src="images/nike-2.jpg" alt="LeBron Witness 5 EP" />
                         <h4>LeBron Witness 5 EP</h4>
                         <div className="rating">
                             <i className="fas fa-star"></i>
@@ -60,7 +60,7 @@ function Products() {
                 <h1 className="title-product">Latest Products</h1>
                 <div className="row">
                     <div className="col-4" data-aos="fade-up">
-                        <img src="images\nike-3.jpg" alt="LeBron Witness 4" />
+                        <img src="images/nike-3.jpg" alt="LeBron Witness 4" />
                         <h4>LeBron Witness 4</h4>
                         <div className="rating">
                             <i className="fas fa-star"></i>
@@ -72,7 +72,7 @@ function Products() {
                         <p>₹7,995</p>
                     </div>
                     <div className="col-4" data-aos="fade-up">
-                        <img src="images\nike-6.jpg" alt="LeBron 17 'Fire Red'" />
+                        <img src="images/nike-6.jpg" alt="LeBron 17 'Fire Red'" />
                         <h4>LeBron 17 'Fire Red'</h4>
                         <div className="rating">
                             <i className="fas fa-star"></i>
@@ -84,7 +84,7 @@ function Products() {
                         <p>₹18,995</p>
                     </div>
                     <div className="col-4" data-aos="fade-up">
-                        <img src="images\nike-7.jpg" alt="LeBron Soldier 13 FlyEase" />
+                        <img src="images/nike-7.jpg" alt="LeBron Soldier 13 FlyEase" />
                         <h4>LeBron Soldier 13 FlyEase</h4>
                         <div className="rating">
                             <i className="fas fa-star"></i>
@@ -96,7 +96,7 @@ function Products() {
                         <p>₹6,397</p>
                     </div>
                     <div className="col-4" data-aos="fade-up">
-                        <img src="images\nike-8.jpg" alt="LeBron Witness 5 EP" />
+                        <img src="images/nike-8.jpg" alt="LeBron Witness 5 EP" />
                         <h4>LeBron Witness 5 EP</h4>
                         <div className="rating">
                             <i className="fas fa-star"></i>
@@ -112,7 +112,7 @@ function Products() {
 
                 <div className="row" data-aos="fade-up">
                     <div className="col-4" data-aos="fade-up">
-                        <img src="images\nike-4.jpg" alt="nike-air-pegasus" />
+                        <img src="images/nike-4.jpg" alt="nike-air-pegasus" />
                         <h4>Nike Air Zoom Pegasus 37</h4>
                         <div className="rating">
                             <i className="fas fa-star"></i>
@@ -124,7 +124,7 @@ function Products() {
                         <p>₹9,995</p>
                     </div>
                     <div className="col-4" data-aos="fade-up">
-                        <img src="images\nike-5.jpg" alt="Zoom Freak 2" />
+                        <img src="images/nike-5.jpg" alt="Zoom Freak 2" />
                         <h4>Zoom Freak 2</h4>
                         <div className="rating">
                             <i className="fas fa-star"></i>
@@ -136,7 +136,7 @@ function Products() {
                         <p>₹10,295</p>
                     </div>
                     <div className="col-4" data-aos="fade-up">
-                        <img src="images\nike-1.jpg" alt="Nike DBreak-Type" />
+                        <img src="images/nike-1.jpg" alt="Nike DBreak-Type" />
                         <h4>Nike DBreak-Type</h4>
                         <div className="rating">
                             <i className="fas fa-star"></i>
@@ -148,7 +148,7 @@ function Products() {
                         <p>₹8,195</p>
                     </div>
                     <div className="col-4" data-aos="fade-up">
-                        <img src="images\nike-2.jpg" alt="LeBron Witness 5 EP" />
+                        <img src="images/nike-2.jpg" alt="LeBron Witness 5 EP" />
                         <h4>LeBron Witness 5 EP</h4>
                         <div className="rating">
                             <i className="fas fa-star"></i>

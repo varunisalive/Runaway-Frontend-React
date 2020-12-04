@@ -28,7 +28,7 @@ function Header() {
                             </div>
                         </div>
                         <div className="col-2" data-aos="fade-left">
-                            <img src="images\header-shoe.jpg" alt="nike-shoe" />
+                            <img src="images/header-shoe.jpg" alt="nike-shoe" />
                         </div>
                     </div>
                 </section>

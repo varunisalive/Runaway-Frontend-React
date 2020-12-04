@@ -32,19 +32,19 @@ function Testimonials() {
                         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat tellus et eleifend porta. Phasellus auctor aliquet tortor nec aliquet. Aliquam elit erat, aliquet id ante sit amet, vestibulum ornare ipsum."
                         ratings="5"
                         name="Jennie Kim"
-                        img="images\Jennie.jpg"
+                        img="images/Jennie.jpg"
                         alt="lady-testimonial-pic" />
                     <TestimonialsCard
                         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat tellus et eleifend porta. Phasellus auctor aliquet tortor nec aliquet. Aliquam elit erat, aliquet id ante sit amet, vestibulum ornare ipsum."
                         ratings="4"
                         name="Lisa"
-                        img="images\Lisa.png"
+                        img="images/Lisa.png"
                         alt="lady-testimonial-pic" />
                     <TestimonialsCard
                         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat tellus et eleifend porta. Phasellus auctor aliquet tortor nec aliquet. Aliquam elit erat, aliquet id ante sit amet, vestibulum ornare ipsum."
                         ratings="5"
                         name="Kim Jisoo"
-                        img="images\Jisoo.jpg"
+                        img="images/Jisoo.jpg"
                         alt="lady-testimonial-pic" />
                 </div>
             </div>

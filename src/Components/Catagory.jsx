@@ -13,9 +13,9 @@ function Catagory() {
         <section id="categories">
             <div className="small-container">
                 <div className="row">
-                    <CatagoryCard img="images\shoes-1.jpg" alt="shoe-1" />
-                    <CatagoryCard img="images\shoes-2.jpg" alt="shoe-2" />
-                    <CatagoryCard img="images\shoes-3.jpg" alt="shoe-3" />
+                    <CatagoryCard img="images/shoes-1.jpg" alt="shoe-1" />
+                    <CatagoryCard img="images/shoes-2.jpg" alt="shoe-2" />
+                    <CatagoryCard img="images/shoes-3.jpg" alt="shoe-3" />
                 </div>
             </div>
         </section>
