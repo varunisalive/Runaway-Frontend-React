@@ -1,59 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import ProductCard from "./ProductCard";
+import axios from "axios";
+
 
 function Products() {
+
+    const [products, setProducts] = useState([])
+
+
+    useEffect(() => {
+        axios
+            .get("/products")
+            .then(res => {
+                console.log(res.data);
+                setProducts(res.data);
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }, []);
+
     return (
         <section id="products">
             <div className="small-container">
                 <h1 className="title-product">Featured Products</h1>
                 <div className="row">
-                    <div className="col-4" data-aos="fade-up">
-                        <img src="images/nike-4.jpg" alt="nike-air-pegasus" />
-                        <h4>Nike Air Zoom Pegasus 37</h4>
-                        <div className="rating">
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                        </div>
-                        <p>₹9,995</p>
-                    </div>
-                    <div className="col-4" data-aos="fade-up">
-                        <img src="images/nike-5.jpg" alt="Zoom Freak 2" />
-                        <h4>Zoom Freak 2</h4>
-                        <div className="rating">
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star-half-alt"></i>
-                            <i className="far fa-star"></i>
-                        </div>
-                        <p>₹10,295</p>
-                    </div>
-                    <div className="col-4" data-aos="fade-up">
-                        <img src="images/nike-1.jpg" alt="Nike DBreak-Type" />
-                        <h4>Nike DBreak-Type</h4>
-                        <div className="rating">
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star-half-alt"></i>
-                        </div>
-                        <p>₹8,195</p>
-                    </div>
-                    <div className="col-4" data-aos="fade-up">
-                        <img src="images/nike-2.jpg" alt="LeBron Witness 5 EP" />
-                        <h4>LeBron Witness 5 EP</h4>
-                        <div className="rating">
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star-half-alt"></i>
-                            <i className="far fa-star"></i>
-                        </div>
-                        <p>₹8,295</p>
-                    </div>
+                    {
+                        products.slice(4, 8).map(post => {
+                            return (
+                                <ProductCard
+                                    key={post._id}
+                                    name={post.name}
+                                    rating={post.rating}
+                                    imgURL={post.imgURL}
+                                    price={post.price}
+                                    alt={post.name} />
+                            );
+                        })
+                    }
                 </div>
 
                 {/* Latest products  */}
