@@ -1,11 +1,15 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
+
+
 function ProductCard(props) {
 
     return (
-        <div className="col-4" data-aos="fade-up">
-            <div key={props._id}>
+        
+            <div className="col-4" data-aos="fade-up">
+            
+            <div key={props._id} >
                 <img src={props.imgURL} alt={props.name} />
                 <h4>{props.name}</h4>
                 <div className="rating">
@@ -19,7 +23,10 @@ function ProductCard(props) {
                 </div>
                 <p>₹{props.price}</p>
             </div>
+           
         </div>
+        
+        
     );
 
 }

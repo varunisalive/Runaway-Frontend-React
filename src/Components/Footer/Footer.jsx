@@ -10,8 +10,8 @@ function Footer() {
                         <h3>Download our App</h3>
                         <p>Download the App for Android & iOS Devices</p>
                         <div className="app-logo">
-                            <input className="google" type="image" src="images/play-store.png" alt="google-play-store-img" />
-                            <input className="apple" type="image" src="images/app-store.png" alt="apple-store-img" />
+                            <input className="google" type="image" src="/images/play-store.png" alt="google-play-store-img" />
+                            <input className="apple" type="image" src="/images/app-store.png" alt="apple-store-img" />
                         </div>
                     </div>
                     <div className="footer-col-2" data-aos="zoom-in">

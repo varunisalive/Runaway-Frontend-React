@@ -169,9 +169,11 @@ hr.dotted {
   transition: transform 0.5s;
 }
 
-.col-4:hover {
-  transform: translateY(-5px);
+.col-4:hover, #products .col-4:hover {
+  cursor: pointer;
+  transform: translateY(-5%);
 }
+
 
 .col-4 img {
   width: 95%;
@@ -424,9 +426,13 @@ a.icon {
 
 /* ---------------------------- PAGE 2 - All PRODUCTS -------------------------------- */
 
+#products{
+  margin: 0 50px;
+}
+
 .row-2 {
   justify-content: space-between;
-  margin: 50px auto;
+  margin: 50px 25px;
 }
 
 select {
@@ -658,5 +664,16 @@ select:focus {
       font-size: 0.5rem;
     }
 
-  }
+/* ---------------------------- PAGE 2 - All  PRODUCTS-------------------------------- */
+
+#products{
+  margin: 0;
+}
+
+.row-2 {
+  justify-content: space-between;
+  margin: 30px 15px;
+}
+
+}
 

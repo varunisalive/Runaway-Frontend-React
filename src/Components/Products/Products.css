@@ -1,0 +1,25 @@
+/* ProductCard Page*/
+
+
+.product-card-link{
+    flex-basis: 25%;
+    text-decoration: none;
+    color: #000000;
+}
+
+@media (max-width: 1024px) {
+
+    .product-card-link{
+        flex-basis: 45%;
+      }
+
+}
+
+@media screen
+  and (max-width: 780px){
+
+    .product-card-link{
+        flex-basis: 100%;
+      }
+
+}
