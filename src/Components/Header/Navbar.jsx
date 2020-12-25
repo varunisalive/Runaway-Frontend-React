@@ -13,7 +13,7 @@ const menuItems = [
     },
     {
         title: "Products",
-        path: "/Products",
+        path: "/products",
         cName: "nav-text"
     },
     {
@@ -26,6 +26,11 @@ const menuItems = [
         path: "/contact-us",
         cName: "nav-text"
     },
+    {
+        title: "Cart",
+        path: "/cart",
+        cName: "nav-text"
+    }
 ]
 
 class Navbar extends React.Component {
@@ -47,17 +52,19 @@ class Navbar extends React.Component {
                 </div>
 
                 <div className="navbar-icon">
-                    <Link to="#" className="menu-bars">
+                    <Link to="" className="menu-bars">
                         <FaIcons.FaBars onClick={this.onToggle} />
                     </Link>
                 </div>
+
+                
 
                 <Spring
                     native
                     force
                     config={{ tension: 9000, friction: 1000, precision: 1 }}
-                    from={{ height: toggle ? 0 : 'auto'}}
-                    to={{ height: toggle ? 'auto' : 0}}>
+                    from={{ height: toggle ? 0 : 'auto' }}
+                    to={{ height: toggle ? 'auto' : 0 }}>
                     {props => (
 
 
@@ -69,15 +76,20 @@ class Navbar extends React.Component {
                                     return (
                                         <li key={index} className={item.cName}>
                                             <Link to={item.path}>
-                                                <span>{item.title}</span>
+                                                {item.title}
                                             </Link>
                                         </li>
                                     )
                                 })}
+
+
                             </ul>
                         </animated.nav>
+                        
                     )}
                 </Spring>
+                
+               
             </div>
 
         )

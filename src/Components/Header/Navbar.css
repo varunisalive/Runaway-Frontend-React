@@ -68,6 +68,8 @@
     display: inline-block;
     margin: 10px;
   }
+
+
   
   .nav-text a {
     font-family: 'Montserrat', sans-serif;
@@ -78,11 +80,6 @@
     transition: color 0.2s;
   }
   
-  span {
-    font-weight: normal;
-    margin-left: 5px;
-    letter-spacing: 0.5px;
-  }
   
   .nav-text a:hover {
     color: #b22222;
@@ -127,6 +124,8 @@
       right: 25px;
       top: 35px;
     }
+
+  
   
   
     .nav-menu {

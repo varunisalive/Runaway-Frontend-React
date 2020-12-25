@@ -39,7 +39,7 @@ function Products() {
 
           <div className="row">
             {
-              products.slice(0, 4).map(post => {
+              products.map(post => {
                 return (
                   <Link className="product-card-link" to={`/products/${post._id}`}>
                     <ProductCard
@@ -55,27 +55,11 @@ function Products() {
             }
           </div>
 
-          <div className="row">
-            {
-              products.slice(4, 8).map(post => {
-                return (
-                  <Link className="product-card-link" to={`/products/${post._id}`}>
-                    <ProductCard
-                      key={post._id}
-                      name={post.name}
-                      rating={post.rating}
-                      imgURL={post.imgURL}
-                      price={post.price}
-                      alt={post.name} />
-                  </Link>
-                );
-              })
-            }
-          </div>
+      
 
           <div className="row">
             {
-              products.slice(0, 4).map(post => {
+              products.map(post => {
                 return (
                   <Link className="product-card-link" to={`/products/${post._id}`}>
                     <ProductCard
