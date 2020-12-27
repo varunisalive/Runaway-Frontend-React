@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import * as FaIcons from 'react-icons/fa';
-// import * as AiIcons from 'react-icons/ai';
+import AuthService from "../../Services/AuthServices";
+import { AuthContext } from "../../Context/AuthContext";
 import { Spring, animated } from 'react-spring/renderprops';
 import { Link } from 'react-router-dom';
 import "./Navbar.css";
@@ -35,6 +36,8 @@ const menuItems = [
 
 class Navbar extends React.Component {
 
+    
+
     state = {
         toggle: false,
         data: menuItems
@@ -43,6 +46,7 @@ class Navbar extends React.Component {
     onToggle = () => this.setState(state => ({ toggle: !state.toggle }))
 
     render() {
+        const { user, setUser, isAuthenticated, setIsAuthenticated } = this.context;
         const { toggle, data } = this.state
         return (
 
@@ -58,7 +62,7 @@ class Navbar extends React.Component {
                 </div>
 
                 
-
+                
                 <Spring
                     native
                     force
@@ -81,7 +85,14 @@ class Navbar extends React.Component {
                                         </li>
                                     )
                                 })}
+                                
+                                { isAuthenticated ? <li className="nav-text">
+                                            
+                                                logout
+                                            
+                                        </li> : null }
 
+                        
 
                             </ul>
                         </animated.nav>
@@ -94,7 +105,9 @@ class Navbar extends React.Component {
 
         )
     }
-
+    
 }
+
+Navbar.contextType = AuthContext;
 
 export default Navbar;

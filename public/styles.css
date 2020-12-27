@@ -83,10 +83,11 @@ hr.dotted {
 
 /* button */
 
-.sign-up {
+.sign-up,
+.login,
+.logout {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  margin: 5px 10px 5px 0;
   display: inline-block;
   background: transparent;
   color: black;
@@ -97,22 +98,20 @@ hr.dotted {
   transition: all 0.5s ease;
 }
 
-.login {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
+.sign-up,
+.admin {
+  margin: 5px 10px 5px 0;
+}
+
+.login,
+.logout {
   margin: 5px 10px;
-  display: inline-block;
-  background: transparent;
-  color: black;
-  padding: 10px 15px;
-  border: 2px solid;
-  border-radius: 10px;
-  outline: none;
-  transition: all 0.5s ease;
 }
 
 .btn .sign-up:hover,
-.login:hover {
+.login:hover,
+.logout:hover,
+.admin:hover {
   background-color: black;
   color: #fff;
   border: 2px solid black;

@@ -8,9 +8,10 @@ import { BrowserRouter as Router, HashRouter, Switch, Route } from "react-router
 
 
 function App() {
+
+ 
+
   return (
-
-
     <HashRouter>
       <div className="App">
         <Switch>
