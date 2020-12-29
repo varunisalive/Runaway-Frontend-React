@@ -1,15 +1,44 @@
-import React, { useContext, useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import AuthService from "../Services/AuthServices";
-import { AuthContext } from "../Context/AuthContext";
-// import Message from "../Components/Messages";
+import Message from "../Components/Message";
 import Navbar from "../Components/Header/Navbar";
 import "./Signup.css";
 
 function Signup(props) {
 
-    const [user, setUser] = useState({Username: "", Password: ""})
+    const [user, setUser] = useState({ username: "", email: "", password: "", role: ""})
     const [message, setMessage] = useState(null);
-    const authContext = useContext(AuthContext);
+    let timerID = useRef(null);
+
+    useEffect(() => {
+        return () => {
+            clearTimeout(timerID);
+        }
+    }, []);
+
+    const resetForm = () => {
+        setUser({ username: "", email: "", password: "" , role: ""});
+    }
+
+    const onChange = event => {
+        setUser({ ...user, [event.target.name]: event.target.value });
+        console.log(user);
+    }
+
+    const onSubmit = event => {
+        event.preventDefault();
+
+        AuthService.register(user).then(data => {
+            const { message } = data;
+            setMessage(message);
+            resetForm();
+            if (!message.msgError) {
+                timerID = setTimeout(() => {
+                    props.history.push('/login');
+                }, 2000);
+            }
+        });
+    }
 
     return (
         <div>
@@ -17,26 +46,29 @@ function Signup(props) {
                 <Navbar />
             </div>
             <div className="container">
-                <form className="form">
+                <form className="form" onSubmit={onSubmit}>
                     <h2 className="heading">Sign Up</h2>
                     <div className="form-input">
                         <label>Username</label>
-                        <input type="text" name="Username" placeholder="Enter Username" />
+                        <input type="text" name="username" placeholder="Enter Username" onChange={onChange} />
                     </div>
                     <div className="form-input">
                         <label>Email</label>
-                        <input type="email" name="Email" placeholder="Enter Email" />
+                        <input type="email" name="email" placeholder="Enter Email" onChange={onChange} />
+                    </div>
+                    <div className="form-input">
+                        <label>Role</label>
+                        <input type="text" name="role" placeholder="Enter Role (admin/user)" onChange={onChange} />
                     </div>
                     <div className="form-input">
                         <label>Password</label>
-                        <input type="password" name="Password" placeholder="Enter Password" />
+                        <input type="password" name="password" placeholder="Enter Password" onChange={onChange} />
                     </div>
-                    <div className="form-input">
-                        <label>Re-Enter Password</label>
-                        <input type="password" name="ConfirmPassword" placeholder="Re-Enter Password" />
-                    </div>
+                    
+
                     <button className="form-btn">Register</button>
                 </form>
+                {message ? <Message message={message} /> : null}
             </div>
 
 

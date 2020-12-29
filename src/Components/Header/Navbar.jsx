@@ -23,11 +23,6 @@ const menuItems = [
         cName: "nav-text"
     },
     {
-        title: "Contact Us",
-        path: "/contact-us",
-        cName: "nav-text"
-    },
-    {
         title: "Cart",
         path: "/cart",
         cName: "nav-text"

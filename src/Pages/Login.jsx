@@ -12,10 +12,7 @@ function Login(props) {
     const authContext = useContext(AuthContext);
 
     const onChange = event => {
-        event.preventDefault();
-
-        setUser({...user, [event.target.name]: event.target.value});
-        console.log(user);
+        setUser({ ...user, [event.target.name]: event.target.value });
     }
 
     const onSubmit = event => {
@@ -23,7 +20,7 @@ function Login(props) {
 
         AuthService.login(user).then(data => {
             const { isAuthenticated, user, message } = data;
-            if(isAuthenticated){
+            if (isAuthenticated) {
                 authContext.setUser(user);
                 authContext.setIsAuthenticated(isAuthenticated);
                 props.history.push('/')

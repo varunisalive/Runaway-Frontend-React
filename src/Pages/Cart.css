@@ -1,0 +1,10 @@
+.cart-heading{
+    padding: 30px 20px 0;
+}
+
+.row-cart{
+  margin: 20px;
+  align-items: left;
+  display: flex;
+}
+

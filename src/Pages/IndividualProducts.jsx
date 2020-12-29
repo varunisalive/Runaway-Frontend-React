@@ -3,10 +3,9 @@ import Navbar from "../Components/Header/Navbar";
 import Footer from "../Components/Footer/Footer";
 import Modal from "../Components/ImgModal/Modal";
 import { CgDetailsMore } from "react-icons/cg";
+import { useDispatchCart } from "../Context/CartContext";
 import "./IndividualProducts.css";
 import axios from "axios";
-
-import { Link } from "react-router-dom";
 
 
 
@@ -17,6 +16,15 @@ function IndividualProducts({ match }) {
     const [product, setProduct] = useState([]);
     const [selectedImage, setSelectedImage] = useState(null);
 
+    const dispatch = useDispatchCart();
+
+    const addToCart = item => {
+        console.log(item);
+        dispatch({
+            type: "ADD", 
+            item
+        })
+    }
 
     useEffect(() => {
 
@@ -86,16 +94,12 @@ function IndividualProducts({ match }) {
                             <option>13</option>
                         </select>
                         <input type="number" value="1" />
-                        <Link className="btn-cart">Add to Cart</Link>
+                        <button className="btn-cart" onClick={() => addToCart(product)}>Add to Cart</button>
 
                         <h3>Product Details <CgDetailsMore className="deets" /></h3>
                         <p className="detail">Deconstruct the past and step into the present with the Nike DBreak-Type. The airy mesh upper and exaggerated stitching add a bold, fresh look onto early Bowerman prototypes pulled from the archives. Retro suede and heel clips designed for support keep you connected to history while the rubber Waffle outsole features flashy angling at the back for a modern look.</p>
                     </div>
                 </div>
-
-                {/* );
-                    })
-                } */}
 
             </div>
             <Footer />

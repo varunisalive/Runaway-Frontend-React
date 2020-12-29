@@ -1,0 +1,26 @@
+.cart-img {
+    min-width: 100px;
+    max-width: 130px;
+    height: auto;
+    border-radius: 30px;
+    
+}
+
+.cart-details{
+    margin: 10px 20px;
+}
+
+.cart-product-name{
+    margin: 20px 0 15px;
+}
+
+.cart-price {
+    color: #555555;
+}
+
+.cart-line{
+    margin-right: 20%;
+    margin-left: 2%;
+    border: none;
+    border-top: 1px solid #555555;
+}
