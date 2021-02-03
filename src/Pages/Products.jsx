@@ -4,6 +4,7 @@ import ProductCard from "../Components/Products/ProductCard";
 import Footer from "../Components/Footer/Footer";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "./Products.css";
 
 function Products() {
 

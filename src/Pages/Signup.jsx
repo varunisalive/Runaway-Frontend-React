@@ -48,21 +48,21 @@ function Signup(props) {
             <div className="container">
                 <form className="form" onSubmit={onSubmit}>
                     <h2 className="heading">Sign Up</h2>
-                    <div className="form-input">
+                    <div className="form-input-div">
                         <label>Username</label>
-                        <input type="text" name="username" placeholder="Enter Username" onChange={onChange} />
+                        <input className="form-input" type="text" name="username" placeholder="Enter Username" onChange={onChange} />
                     </div>
-                    <div className="form-input">
+                    <div className="form-input-div">
                         <label>Email</label>
-                        <input type="email" name="email" placeholder="Enter Email" onChange={onChange} />
+                        <input className="form-input" type="email" name="email" placeholder="Enter Email" onChange={onChange} />
                     </div>
-                    <div className="form-input">
+                    <div className="form-input-div">
                         <label>Role</label>
-                        <input type="text" name="role" placeholder="Enter Role (admin/user)" onChange={onChange} />
+                        <input className="form-input" type="text" name="role" placeholder="Enter Role (admin/user)" onChange={onChange} />
                     </div>
-                    <div className="form-input">
+                    <div className="form-input-div">
                         <label>Password</label>
-                        <input type="password" name="password" placeholder="Enter Password" onChange={onChange} />
+                        <input className="form-input" type="password" name="password" placeholder="Enter Password" onChange={onChange} />
                     </div>
                     
 

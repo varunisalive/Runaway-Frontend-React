@@ -1,4 +1,5 @@
 import React from "react";
+import "./Catagory.css";
 
 function CatagoryCard(props) {
     return (

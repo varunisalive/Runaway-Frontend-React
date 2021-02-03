@@ -21,12 +21,11 @@
     margin-bottom: 20px;
     font-family: 'Rubik Mono One', sans-serif;
     font-size: 35px;
-    transition: color 0.5s ease-out;
+    transition: color 0.1s ease-out;
   }
   
   #footer h1:hover {
-  
-   color: #b22222;
+    color: #b22222;
   }
   
   #footer h3 {
@@ -90,3 +89,9 @@
   
   }
 
+
+
+
+
+
+ 

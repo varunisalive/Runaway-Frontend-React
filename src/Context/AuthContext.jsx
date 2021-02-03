@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         AuthService.isAuthenticated().then(data => {
-            setUser(data);
+            setUser(data.user);
             setIsAuthenticated(data.isAuthenticated);
             setIsLoaded(true);
         });

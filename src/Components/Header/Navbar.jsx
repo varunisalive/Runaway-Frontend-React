@@ -31,7 +31,7 @@ const menuItems = [
 
 class Navbar extends React.Component {
 
-    
+
 
     state = {
         toggle: false,
@@ -56,8 +56,8 @@ class Navbar extends React.Component {
                     </Link>
                 </div>
 
-                
-                
+
+
                 <Spring
                     native
                     force
@@ -80,27 +80,29 @@ class Navbar extends React.Component {
                                         </li>
                                     )
                                 })}
-                                
-                                { isAuthenticated ? <li className="nav-text">
-                                            
-                                                logout
-                                            
-                                        </li> : null }
 
-                        
+                                {isAuthenticated ? <li className="nav-text">
+
+                                    <button>
+                                       Logout
+                                    </button>
+
+                                </li> : null}
+
+
 
                             </ul>
                         </animated.nav>
-                        
+
                     )}
                 </Spring>
-                
-               
+
+
             </div>
 
         )
     }
-    
+
 }
 
 Navbar.contextType = AuthContext;

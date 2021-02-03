@@ -24,18 +24,18 @@ label {
     margin-bottom: 5px;
 }
 
-input {
+.form-input {
     padding: 7px 10px;
     border: 2px solid #fff;
     border-radius: 5px;
     width: 70%;
 }
 
-input:focus {
+.form-input:focus {
     border: 2px solid #b22222;
 }
 
-.form-input {
+.form-input-div {
     padding: 10px;
 }
 

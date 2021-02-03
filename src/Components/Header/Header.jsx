@@ -2,12 +2,15 @@ import React, { useContext } from "react";
 import AuthService from "../../Services/AuthServices";
 import { AuthContext } from "../../Context/AuthContext";
 import Navbar from "./Navbar";
+import "./Navbar.css"
 import { Link } from 'react-router-dom';
 
 
 function Header(props) {
 
     const { isAuthenticated, user, setIsAuthenticated, setUser } = useContext(AuthContext);
+
+   
 
     const onClickLogoutHandler = () => {
         AuthService.logout().then(data => {
@@ -17,6 +20,7 @@ function Header(props) {
             }
         });
     }
+
 
     const unauthenticated = () => {
         return (
@@ -41,6 +45,7 @@ function Header(props) {
                         </Link> : null
                 }
                 <button className="logout" type="button" name="button" data-aos="zoom-in" onClick={onClickLogoutHandler}>Logout</button>
+                <p className="username-para">Welcome, <strong className="username">{user.username} !</strong></p>
             </>
         );
     }

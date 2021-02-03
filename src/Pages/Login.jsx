@@ -39,13 +39,13 @@ function Login(props) {
             <div className="container">
                 <form className="form" onSubmit={onSubmit}>
                     <h2 className="heading">Login</h2>
-                    <div className="form-input">
+                    <div className="form-input-div">
                         <label>Username</label>
-                        <input type="text" name="username" onChange={onChange} placeholder="Enter Username" />
+                        <input className="form-input" type="text" name="username" onChange={onChange} placeholder="Enter Username" />
                     </div>
-                    <div className="form-input">
+                    <div className="form-input-div">
                         <label>Password</label>
-                        <input type="password" name="password" onChange={onChange} placeholder="Enter Password" />
+                        <input className="form-input" type="password" name="password" onChange={onChange} placeholder="Enter Password" />
                     </div>
                     <button className="form-btn">Login</button>
                 </form>
